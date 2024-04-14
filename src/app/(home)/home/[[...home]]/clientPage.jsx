@@ -41,7 +41,7 @@ const Page = (props) => {
     const fetchJobs = async () => {
       try {
         const apiurl = process.env.NEXT_PUBLIC_BACKEND_URL;
-        const url = `${apiurl}/search?page=${currentPage}&&keyword=${desc}`;
+        const url = `${apiurl}search?page=${currentPage}&&keyword=${desc}`;
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) {
           throw new Error("Failed to fetch jobs");
