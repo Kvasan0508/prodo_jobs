@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tw-a-scroll-config::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.tw-a-scroll-config::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #dfe9eb;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tw-a-scroll-config::-webkit-scrollbar-track:hover {
+  background-color: #b8c0c2;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tw-a-scroll-config::-webkit-scrollbar-track:active {
+  background-color: #b8c0c2;
+}
+
+.tw-a-scroll-config::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #757575;
+}
+
+.tw-a-scroll-config::-webkit-scrollbar-thumb:hover {
+  background-color: #757575;
+}
+
+.tw-a-scroll-config::-webkit-scrollbar-thumb:active {
+  background-color: #757575;
 }
