@@ -38,12 +38,6 @@ const Page = (props) => {
   }
 
   useEffect(() => {
-    if (!desc?.length > 0) {
-      router.replace("/details");
-    }
-  }, []);
-
-  useEffect(() => {
     const fetchJobs = async () => {
       try {
         const apiurl = process.env.NEXT_PUBLIC_BACKEND_URL;
