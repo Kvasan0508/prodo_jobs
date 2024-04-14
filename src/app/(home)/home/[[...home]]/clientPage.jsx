@@ -63,7 +63,7 @@ const Page = (props) => {
       setLoading(true);
       try {
         const apiurl = process.env.NEXT_PUBLIC_BACKEND_URL;
-        const url = `${apiurl}/search?keyword=${
+        const url = `${apiurl}search?keyword=${
           desc?.length > 0 ? desc + " " + customSearch : customSearch
         }&&page=${currentPage}`;
         const response = await fetch(url, { cache: "no-store" });
